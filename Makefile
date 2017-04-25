@@ -6,8 +6,11 @@ vagrant:
 	@if [ ! -d /vagrant/ops ]; \
 	 then \
 		mkdir ops;\
-		#git clone git@github.com:barnesfoundation/barnes-ops.git /vagrant/ops/barnes-ops;\
 	fi
+	#@git clone git@github.com:BarnesFoundation/barnes-ops.git /vagrant/ops/barnes-ops;\
+	#@git clone git@github.com:BarnesFoundation/barnes-ops-collection.git /vagrant/ops/barnes-ops-collection;\
+	#@git clone git@github.com:BarnesFoundation/barnes-ops-es.git /vagrant/ops/barnes-ops-es;\
+
 	@/vagrant/ops/barnes-ops/vagrant/setup.sh
 
 all-docs:
@@ -15,8 +18,9 @@ all-docs:
 	@if [ ! -d /vagrant/docs ]; \
 	 then \
 	 mkdir docs;\
-	 #git clone git@github.com:barnesfoundation/barnes-docs.git /vagrant/ops/barnes-docs;\
 	fi
+	#@git clone git@github.com:barnesfoundation/barnes-docs.git /vagrant/ops/barnes-docs;\
+
 
 all-projects:
 	@echo "Cloneing all the projects..."
